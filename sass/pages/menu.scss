@@ -1,0 +1,227 @@
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+$color_h2: #888888;
+$dark-grey : darken(#888888, 35%);
+$lightgrey : lightgrey;
+$background_section : #f7f7f7;
+$global_width : 480px;
+$black : #000000;
+$color: $black;
+$white : #ffffff;
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url("Shrikhand-Regular.otf"), format("OpenType");
+    
+}
+@font-face
+{
+    font-family: "Roboto";
+    src: url("Roboto-Regular.ttf") , format("truetype");
+}
+
+@mixin fontfam_Rob {
+    font-family: 'Roboto';  
+}
+
+@mixin fontfam_Shrik {
+    font-family: 'Shrikhand';  
+}
+
+@mixin details_arrow-left {
+    position: relative;
+    left: 25px;
+    top: 25px;
+    font-size: 20px;
+}
+
+@mixin details_container {
+    border: 1px solid $background_section;
+    background-color: $background_section;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 10px;
+    margin-top: -10px;
+    position: relative;
+    bottom: 0px;
+}
+
+@mixin bloc_menu {
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px $lightgrey;
+    width: 97%;   
+    height: 55px; 
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-top: 1px;
+}
+
+@mixin details_h3 {
+    margin: 10px 0px 2px 0px ;
+    font-size: 15px;
+}
+
+@mixin details_h2 {
+    border-bottom: 2.5px solid $tertiary;
+    width: 39px;
+    color: $color_h2;
+    font-size: 15px;
+    margin-left: 8px;
+    padding-bottom: 2px;
+    font-weight: lighter;
+    margin-top: 30px;
+}
+
+@mixin details_p-bloc {
+        display: inline;
+        font-size: 13px; 
+        align-items: baseline;
+}
+
+@mixin details_price {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -18px; 
+        margin-right: 18px;
+        font-weight: bold;
+}
+
+@mixin details_btn-command {
+    padding: 13px 45px 13px 45px ;
+    border-radius: 25px;
+    display: block;
+    margin: auto;
+    background-color: $primary;
+    border: none;
+    color: $white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+#bloc_page {
+    max-width: $global_width ;
+    margin: 0;
+}
+
+#logo {
+    width: 40%;
+    padding: 0px 0px 0px 15px;
+    display: block;
+    margin : auto;
+}
+
+.link_color  {
+    color: $black;
+    text-decoration: none;
+}
+
+#arrow-left{
+    @include details_arrow-left;
+}
+
+
+#container {
+    @include details_container
+}
+
+#fr-food 
+{
+    position: relative;
+    top: 25px;
+    width: 100%;
+    height: 270px;
+    
+}
+
+#heart-fr
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+        #heart{
+            font-size: 22px;
+            margin-right: 20px;
+            padding-top: 22px;
+        }
+        
+        h1 {
+            @include fontfam_Shrik;
+            font-size: 25px;
+            padding-left: 10px;
+        }
+}
+
+
+h2 {
+    @include details_h2;
+}
+
+h2, h3, p , #btn-command , #footer{
+    @include fontfam_Rob;
+}
+
+.bloc {
+    @include bloc_menu;
+
+    .bloc_link {
+        color: $black;
+        text-decoration: none;
+    }
+
+    h3 {
+        @include details_h3;
+    }
+        
+        p {
+            @include details_p-bloc;
+
+        }    
+        
+            .price {
+                    @include details_price;
+        }
+        
+}
+
+#btn-container {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+#btn-command {
+    @include details_btn-command
+}
+
+#footer {
+    
+    background-color: $dark-grey;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px; 
+    font-size: 14px;
+    //il manque les icons
+    
+        #footer_title {
+            @include fontfam_Shrik;
+            font-size: 15px;
+            color: $white;
+            font-weight: lighter;
+            margin-bottom: 0px;
+        }
+
+            p {
+                color: $white;
+                margin-bottom: -8px ;
+            }
+
+            i {
+                color: $white;
+            }
+
+    
+}
+
