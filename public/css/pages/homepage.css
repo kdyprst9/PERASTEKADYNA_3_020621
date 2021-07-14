@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../fonts/Shrikhand-Regular.otf"), format("OpenType");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf"), format("truetype");
+}
+#logo {
+  width: 30px;
+  padding: 0px 0px 0px 15px;
+  display: block;
+  margin: auto;
+}
+
+/*# sourceMappingURL=homepage.css.map */

@@ -13,6 +13,7 @@
   "author": "Kadyna",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "sass": "^1.34.0"
   }
 }
