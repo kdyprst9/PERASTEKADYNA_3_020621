@@ -7,21 +7,184 @@
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf"), format("truetype");
 }
-#logo {
-  width: 30px;
-  padding: 0px 0px 0px 15px;
-  display: block;
-  margin: auto;
+html, body {
+  margin: 0;
 }
 
+#header_menu {
+  padding-bottom: 0px;
+  box-shadow: lightgrey 0px 2px 5px;
+}
+
+#logo_menu {
+  width: 41%;
+  display: flex;
+  margin: auto;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+#localisation {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  margin-top: 3px;
+  padding-bottom: 5px;
+  background-color: #eeeeee;
+  font-size: 15px;
+}
+#localisation i {
+  padding-right: 10px;
+}
+
+#explore {
+  background-color: #f7f7f7;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  padding-bottom: 5px;
+}
+#explore #accueil-h1 {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 23px;
+  font-weight: bold;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+}
+#explore #accueil-p {
+  font-size: 17px;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: -15px;
+}
+
+#fonction {
+  margin-bottom: 50px;
+  width: auto;
+}
+#fonction .bloc_numbers {
+  display: flex;
+  align-items: baseline;
+}
+#fonction .bloc_numbers .numbers {
+  background-color: #9356DC;
+  border-radius: 100%;
+  padding: 0px 4px 0px 4px;
+  border: #9356DC 5px solid;
+  color: #ffffff;
+  position: relative;
+  left: 60px;
+}
+#fonction button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 23px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: lightgrey 0px 5px 10px 2px;
+  font-size: 16px;
+  background-color: #f7f7f7;
+}
+#fonction button:hover {
+  background-color: #f2eafb;
+  box-shadow: #b1b1b1 0px 5px 10px 2px;
+  transition: transform 400ms, background-color 350ms 150ms, box-shadow 350ms;
+}
+#fonction button:hover:active {
+  background-color: #9356DC;
+}
+#fonction .fonction-icons {
+  font-size: 18px;
+  color: #888888;
+  position: relative;
+  left: 80px;
+}
+
+h3 {
+  font-size: 23px;
+  padding-left: 15px;
+  padding-top: 50px;
+}
+
+#resto_h3 {
+  background-color: #f7f7f7;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+
+#restaurants {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+#restaurants .bloc_restaurants {
+  min-width: 300px;
+  height: 245px;
+  margin: 15px 15px 5px 15px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: lightgrey 2px 1px 10px 1px;
+}
+#restaurants .bloc_restaurants .img_restaurants {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+#restaurants .bloc_restaurants a {
+  color: #000000;
+  text-decoration: none;
+  font-family: "Roboto";
+}
+#restaurants .bloc_restaurants h4 {
+  margin-top: 10px;
+  font-size: 17px;
+}
+#restaurants .bloc_restaurants p {
+  margin-top: -19px;
+}
+#restaurants .bloc_restaurants h4, #restaurants .bloc_restaurants p {
+  padding-left: 15px;
+}
+#restaurants .bloc_restaurants i {
+  position: relative;
+  left: 200px;
+  bottom: 47px;
+  font-size: 25px;
+  font-weight: lighter;
+}
+#restaurants .btn-heart {
+  display: none;
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../fonts/Shrikhand-Regular.otf"), format("OpenType");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf"), format("truetype");
+}
 #bloc_page {
-  max-width: 480px;
   margin: 0;
 }
 
 #logo {
-  width: 40%;
-  padding: 0px 0px 0px 15px;
+  width: 30%;
   display: block;
   margin: auto;
 }
@@ -59,6 +222,7 @@
   top: 15px;
   width: 100%;
   height: 270px;
+  object-fit: cover;
 }
 
 #heart-fr {
@@ -66,10 +230,13 @@
   flex-direction: row;
   justify-content: space-between;
 }
+#heart-fr #heart-btn {
+  border: none;
+  background-color: #f7f7f7;
+}
 #heart-fr #heart {
   font-size: 22px;
   margin-right: 20px;
-  padding-top: 25px;
 }
 #heart-fr h1 {
   font-family: "Shrikhand";
@@ -96,10 +263,9 @@ h2, h3, p, #btn-command, #footer {
 .bloc {
   border-radius: 14px;
   box-shadow: 0px 0px 10px 0px lightgrey;
-  width: 97%;
+  width: 100%;
   height: 65px;
   margin-bottom: 15px;
-  padding-left: 10px;
 }
 .bloc .bloc_link {
   color: #000000;
@@ -113,10 +279,12 @@ h2, h3, p, #btn-command, #footer {
   text-overflow: ellipsis;
   text-overflow: "…";
   white-space: nowrap;
+  padding-left: 10px;
 }
 .bloc p {
   display: inline;
   font-size: 14px;
+  padding-left: 10px;
 }
 .bloc .price {
   display: flex;
@@ -132,22 +300,31 @@ h2, h3, p, #btn-command, #footer {
 }
 
 #btn-command {
-  padding: 13px 45px 13px 45px;
-  border-radius: 25px;
+  padding: 17px 30px 17px 30px;
+  border-radius: 30px;
+  box-shadow: lightgrey 5px 5px 12px 5px;
   display: block;
   margin: auto;
-  background-color: #9356DC;
   border: none;
   color: #ffffff;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+}
+#btn-command:hover {
+  box-shadow: #b1b1b1 5px 5px 12px 3px;
+  transform: scale(1);
+  transition: transform 400ms, box-shadow 400ms;
+  background: linear-gradient(to bottom right, #9b63df, #ff88de);
 }
 
 #footer {
-  background-color: #2f2f2f;
+  background-color: #2e2e2e;
   height: 200px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  align-items: baseline;
   padding-left: 20px;
   font-size: 14px;
 }
@@ -157,13 +334,21 @@ h2, h3, p, #btn-command, #footer {
   color: #ffffff;
   font-weight: lighter;
   margin-bottom: 0px;
+  margin-right: 20px;
 }
 #footer p {
   color: #ffffff;
   margin-bottom: -8px;
+  margin-right: 50px;
 }
 #footer i {
   color: #ffffff;
+  padding-right: 8px;
+}
+#footer .icon_footer {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
 }
 
 /*# sourceMappingURL=menu.css.map */

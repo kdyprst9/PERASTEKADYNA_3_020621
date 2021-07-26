@@ -1,9 +1,13 @@
 $primary: #9356DC;
 $secondary: #FF79DA;
+$light-hover-primary : lighten(#9356DC, 3%);
+$light-hover-secondary : lighten(#FF79DA, 3%);
 $tertiary: #99E2D0;
 $color_h2: #888888;
-$dark-grey : darken(#888888, 35%);
+$light_violet : lighten(#9356dc , 35%);
+$dark-grey : darken(hsl(0, 0%, 53%), 35%);
 $lightgrey : lightgrey;
+$lighter-grey : lighten(#888888, 40%);
 $background_section : #f7f7f7;
 $black : #000000;
 $color: $black;
